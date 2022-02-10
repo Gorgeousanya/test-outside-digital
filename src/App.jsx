@@ -86,16 +86,16 @@ Home(){
         contentLabel="Modal"
         ariaHideApp={false}
       >
-        <button onClick={()=>this.setState({modalIsOpen: !this.state.modalIsOpen})} style={{position: "relative", top: "15px", left:"92%", borderColor: "rgba(0, 0, 0, 0)", backgroundColor: 'rgba(0, 0, 0, 0)'}}><img src={close} /></button>
+        <button onClick={()=>this.setState({modalIsOpen: !this.state.modalIsOpen})} className='App-Close'><img src={close} /></button>
         <h3 className="H3">{tax}</h3>
         <h5 className="H4"> {useTax}</h5>
         
-        <div style={{position: "relative", left: "32px", right: "0", top: "0px", bottom: "66.67%", fontFamily: "Lab Grotesque", fontSize: "14px", lineHeight: "24px", color: "#000000",}}>
+        <div className='App-Salary'>
           {salary}
         </div>
         
         <input className="App-Input" placeholder='Введите данные' autoFocus={false} value={this.state.salary} style={!this.state.error ? {paddingLeft: "8px"} : {border: "1px solid #DC3131", paddingLeft: "8px"}} onChange={(event) => {
-        this.setState({salary:event.target.value})
+        this.setState({salary: event.target.value})
       }}/>
           <button className="App-Calculate" onClick={()=>{this.setState({calculate: true}); console.log(Number(this.state.salary)); this.Tax(); this.Calculate(); this.state.payments.forEach((item)=> console.log(item))}}>Рассчитать</button>
         {
@@ -103,20 +103,20 @@ Home(){
           <div>
           <h3 className='App-Sum'>{sum}:</h3>         
           <ListGroup variant="flush" className='App-List'>
-            { this.state.payments.map((item)=>
+            { this.state.payments.map((item, i)=>
             (
-              <div>
+              <div >
               <ListGroup.Item  style={{ borderTopColor: "rgba(0, 0, 0, 0)", borderLeftColor: "rgba(0, 0, 0, 0)", borderRightColor: "rgba(0, 0, 0, 0)", padding: "0"}}>
-              <Checkbox
+              <div style={{display: "inline-block"}}><Checkbox
               size="small"
-              defaultChecked
+              defaultChecked={item == this.state.rest ? false : true}
               sx={{
                 color: "#DFE3E6",
                 '&.Mui-checked': {
                   color: "red",
                 },
               }}
-                />{item} </ListGroup.Item>
+                />{item} рублей<p className="App-Num"> {i+1==2 ? `вo ${i+1}-й год` : `в ${i+1}-й год`}</p></div> </ListGroup.Item>
                 </div>))         
                 }
             </ListGroup>
@@ -128,7 +128,7 @@ Home(){
           <button className="App-Payment">{payment}</button>
           <button className="App-Term"> {term}</button>
         </div>
-        <button className="App-Add">{add}</button>
+        <button className="App-Add" onClick={()=>this.setState({modalIsOpen: !this.state.modalIsOpen})}>{add}</button>
       </Modal>
       </header>
     </div>
