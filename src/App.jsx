@@ -1,5 +1,5 @@
 import { Button, ListGroup} from 'react-bootstrap';
-import ReactDOM from 'react-dom';
+import {HashRouter} from 'react-router-dom';
 import Modal from 'react-modal';
 import Checkbox from '@mui/material/Checkbox';
 import React, { useState } from 'react';
@@ -71,6 +71,7 @@ Home(){
   const term="Срок";
   const add="Добавить"
   return (
+    <HashRouter basename={process.env.PUBLIC_URL}>
     <div className="App">
       <header className="App-header">
         
@@ -132,6 +133,7 @@ Home(){
       </Modal>
       </header>
     </div>
+    </HashRouter>
   );
 }
   render(){
