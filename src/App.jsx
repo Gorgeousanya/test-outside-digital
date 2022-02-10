@@ -46,7 +46,6 @@ Tax(){
   else {
     this.state.error=true;
     console.log(this.state.error, "error");
-
 }
 }
 
@@ -55,11 +54,9 @@ Calculate(){
   console.log(this.state.count);
   for (let i=0; i<this.state.count; i++){
     arr[i]=this.state.tax;
-    console.log(arr[i]);
   }
   if (this.state.rest!=0) arr[this.state.count-1]=this.state.rest;
-  console.log(arr);
-  this.state.payments= arr;
+  this.state.payments = arr;
 }
 
 Home(){
