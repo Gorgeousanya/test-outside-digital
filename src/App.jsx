@@ -72,7 +72,7 @@ Home(){
   const term="Срок";
   const add="Добавить"
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    // <HashRouter basename={process.env.PUBLIC_URL}>
     <div className="App">
       <header className="App-header">
         
@@ -134,7 +134,7 @@ Home(){
       </Modal>
       </header>
     </div>
-    </HashRouter>
+    // </HashRouter>
   );
 }
   render(){
