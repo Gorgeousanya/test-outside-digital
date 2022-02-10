@@ -3,6 +3,7 @@ import {HashRouter} from 'react-router-dom';
 import Modal from 'react-modal';
 import Checkbox from '@mui/material/Checkbox';
 import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 import './App.css';
 import close from './Vector.png';
 
