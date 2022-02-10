@@ -74,12 +74,14 @@ flex-grow: 0;
   height: auto;
   left: calc((100% - 40vmax) / 2);
   top: 120px;
+  bottom: 120px;
 
 background: #FFFFFF;
 border-radius: 30px;
 }
 .Overlay {
   position: fixed;
+  overflow: auto;
     top: 0;
     left: 0;
     right: 0;
@@ -127,6 +129,7 @@ color: #808080;
 
 .App-Add{
   position: relative;
+  border-width: 0;
 width: 35vmax;
 height: 56px;
 left: 32px;
@@ -139,13 +142,18 @@ color: white;
 font-family: Lab Grotesque;
 }
 
+.App-Add:hover {
+  background-color: #EA0029;
+}
+
 .App-Input{
   position: relative;
 left: 32px;
 top: 0px;
 height: 40px;
 width: 35vmax;
-
+outline: 0;
+    outline-offset: 0;
 font-family: Lab Grotesque;
 font-style: normal;
 font-weight: 500;
@@ -154,6 +162,16 @@ line-height: 24px;
 border: 1px solid #DFE3E6;
 box-sizing: border-box;
 border-radius: 3px;
+}
+
+.App-Input:hover{
+  border: 1px solid #000000;
+}
+
+.App-Input:focus{
+  outline: 0;
+  outline-offset: 0;
+  border: 1px solid #DFE3E6;
 }
 
 .App-Calculate{
@@ -182,12 +200,16 @@ color: #EA0029;
 padding: 0;
 }
 
+.App-Calculate:hover{
+  color: #F53A31;
+}
+
 .App-Payment{
   display: flex;
 flex-direction: row;
 align-items: center;
 padding: 6px 12px;
-
+border-width: 0;
 position: relative;
 width: 73px;
 height: 36px;
@@ -216,6 +238,11 @@ color: #FFFFFF;
 flex: none;
 order: 0;
 flex-grow: 0;
+}
+
+.App-Payment:hover {
+  background: #DFE3E6;
+  color: #000000;
 }
 
 .App-Term{
@@ -253,6 +280,62 @@ border: 1px solid #FFFFFF;
 box-sizing: border-box;
 filter: drop-shadow(0px 0px 44px #CFDAE7);
 border-radius: 6px;
+}
+.App-Button:hover {
+
+color: black;
+background-color:white;
+}
+
+.App-List{
+  position: relative;
+  left: 32px;
+  top:10px;
+  width: 34vmax; 
+  font-family: Lab Grotesque;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  border-top-color: rgba(0, 0, 0, 0);
+}
+
+.App-Sum{
+  position: relative;
+  left: 32px;
+  right: 0;
+  top: 16px; 
+  bottom: 66.67%; 
+  font-family: Lab Grotesque;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.App-Less{
+  position: relative; 
+  width: 112px; 
+  height:24px; 
+  left: 32px;  
+  top: 24px; 
+  font-family: Lab Grotesque;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000; 
+  margin-bottom: 2rem;
+}
+
+.App-Salary{
+  position: relative; 
+  left: 32px;  
+  top: 16px; 
+  font-family: Lab Grotesque;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000; 
+  margin-bottom: 2rem;
 }
 
 @keyframes App-logo-spin {
