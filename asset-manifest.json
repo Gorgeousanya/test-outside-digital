@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f358ff20.css",
+    "main.js": "/static/js/main.73343a9c.js",
+    "static/js/787.71df535f.chunk.js": "/static/js/787.71df535f.chunk.js",
+    "static/media/LabGrotesque-Regular.ttf": "/static/media/LabGrotesque-Regular.2b7d5ea425494e477703.ttf",
+    "index.html": "/index.html",
+    "main.f358ff20.css.map": "/static/css/main.f358ff20.css.map",
+    "main.73343a9c.js.map": "/static/js/main.73343a9c.js.map",
+    "787.71df535f.chunk.js.map": "/static/js/787.71df535f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f358ff20.css",
+    "static/js/main.73343a9c.js"
+  ]
+}
